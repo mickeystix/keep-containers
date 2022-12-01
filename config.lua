@@ -66,6 +66,5 @@ Config.vendor_locations = {
 -- just give it to admins they can access containers and remove them!
 Config.super_users = {
     ["Gxxxxxxx2"] = true, -- < in qb use character citizen id
-    ["YJP85462"] = true,
     ["char1:8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5"] = true --- < in esx use users's identifier 
 }
