@@ -23,6 +23,7 @@ OR
 
 - Custom container size and weight
 - Ability to transfer ownership of containers
+- Police ability to open containers with boltcutters (QB Only, must add item to shared/items.lua and if you want it in police armory, add to qb-policejob where appropriate)
 - Locking containers with password (encrypted by bcrypt)
 - Container variant
 - Dynamic object loading
@@ -96,19 +97,6 @@ OR
         ["shouldClose"] = true,
         ["combinable"] = nil,
         ["description"] = "Small Green Container"
-    },
-
-    ["containerboltcutter"] = {
-        ["name"] = "containerboltcutter",
-        ["label"] = "Boltcutter",
-        ["weight"] = 1000,
-        ["type"] = "item",
-        ["image"] = "boltcutter.png",
-        ["unique"] = true,
-        ["useable"] = false,
-        ["shouldClose"] = false,
-        ["combinable"] = nil,
-        ["description"] = "a boltcutter to open containers by police"
     }
 ```
 
@@ -144,14 +132,6 @@ OR
         stack = false,
         close = true,
         description = nil
-     },
-
-    ["containerboltcutter"] = {
-        label = "Boltcutter",
-        weight = 1,
-        stack = false,
-        close = false,
-        description = 'a boltcutter to open containers by police'
      }
 ```
 

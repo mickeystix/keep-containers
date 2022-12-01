@@ -68,6 +68,41 @@ local function open_stash( metadata )
     Close()
 end
 
+RegisterNetEvent("keep-containers:client:break_in", function (metadata)
+    if not metadata then return end
+    local duration = 1
+
+    if Framework() == 1 then
+        Core.Functions.Progressbar("keep_container_opening", "Open", duration * 1000, false, false, {
+            disableMovement = true,
+            disableCarMovement = false,
+            disableMouse = false,
+            disableCombat = true
+         }, {}, {}, {}, function() open_stash(metadata) end)
+    elseif Framework() == 2 then
+        if Config.input == "ox_lib" then
+            if lib.progressCircle({
+                duration = 2000,
+                position = "bottom",
+                useWhileDead = false,
+                canCancel = true,
+                disable = {
+                    car = true,
+                    move = true,
+                    combat = true
+
+                 }
+            }) then
+                open_stash(metadata)
+            else
+                print("Do stuff when cancelled")
+            end
+        else
+            open_stash(metadata)
+        end
+    end
+end)
+
 RegisterNetEvent("keep-containers:client:open", function( metadata )
     if not metadata then return end
     local duration = 1

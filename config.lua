@@ -19,7 +19,7 @@ Config.esx_target = "ox_target" -- ox_target / qtarget (ONLY ESX won't effect qb
 Config.container_depots = {
     -- when adding new zone make sure it has enough minZ and maxZ or might get into issue with placing system
     ["LT_WELD_SUPPLY"] = {
-        name = "LT Weld Ssupply",
+        name = "LT Weld Supply",
         positions = {
             vector2(1219.7977294922, -1369.8439941406),
             vector2(1177.3232421875, -1366.3834228516),
@@ -31,7 +31,7 @@ Config.container_depots = {
         blip = {
             name = "Containers Depot",
             coords = vector3(1199.14, -1364.4923, 35.21),
-            scale = 1.5,
+            scale = 0.5,
             color = 43,
             sprite = 677
          }
@@ -50,30 +50,22 @@ Config.container_depots = {
         blip = {
             name = "Postal Containers Depot",
             coords = vector3(1199.14, -1364.4923, 35.21),
-            scale = 1.5,
+            scale = 0.5,
             color = 43,
             sprite = 677
          }
     }
 }
 
--- just give it to admins they can access containers and remove them!
-Config.super_users = {
-    ["Gxxxxxxx2"] = true, -- < in qb use character citizen id
-    ["char1:8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5"] = true --- < in esx use users's identifier 
-}
-
--- Who can use BoltCutter (Police by defualt)
-
-Config.bolt_cutter = {
-    -- ['jobname'] = {grades}
-    ["police"] = {
-        -- [grade(number)] = true/false
-        [0] = true,
-        [1] = true
+Config.vendor_locations = {
+    ["LT_WELD_SUPPLY_VENDOR"] = {
+        coords = vector4(1203.15, -1367.23, 35.38, 177.59),
     }
 }
 
-Config.remove_bolt_cutter_on_use = true
--- Do not change this value (if you already have a bolt cutter item, you can change it to what you have)
-Config.bolt_cutter_item_name = "containerboltcutter"
+-- just give it to admins they can access containers and remove them!
+Config.super_users = {
+    ["Gxxxxxxx2"] = true, -- < in qb use character citizen id
+    ["YJP85462"] = true,
+    ["char1:8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5"] = true --- < in esx use users's identifier 
+}
